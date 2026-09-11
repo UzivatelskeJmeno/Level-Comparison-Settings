@@ -61,8 +61,9 @@ class $modify(MakeLevelInfoLayer, LevelInfoLayer) {
 
         btn->setID("create-button"_spr);
         menu->addChild(btn);
+        btn->setZOrder(-1000);
         menu->updateLayout();
-
+        
         return true;
     }
 
@@ -94,6 +95,7 @@ class $modify(MakeEditLevelLayer, EditLevelLayer) {
 
         btn->setID("create-button"_spr);
         menu->addChild(btn);
+        btn->setZOrder(-1000);
         menu->updateLayout();
 
         return true;
