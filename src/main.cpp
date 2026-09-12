@@ -61,7 +61,8 @@ class $modify(MakeLevelInfoLayer, LevelInfoLayer) {
 
         btn->setID("create-button"_spr);
         menu->addChild(btn);
-        btn->setZOrder(-1000);
+        auto btn_Z  = Mod::get()->getSettingValue<int64_t>("Z-Layer");
+        btn->setZOrder(btn_Z);
         menu->updateLayout();
         
         return true;
@@ -95,7 +96,8 @@ class $modify(MakeEditLevelLayer, EditLevelLayer) {
 
         btn->setID("create-button"_spr);
         menu->addChild(btn);
-        btn->setZOrder(-1000);
+        auto btn_Z  = Mod::get()->getSettingValue<int64_t>("Z-Layer");
+        btn->setZOrder(btn_Z);
         menu->updateLayout();
 
         return true;
