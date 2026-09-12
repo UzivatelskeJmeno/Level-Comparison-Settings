@@ -63,7 +63,7 @@ class $modify(MakeLevelInfoLayer, LevelInfoLayer) {
         menu->addChild(btn);
         auto btn_Z_LIL = Mod::get()->getSettingValue<int64_t>("Z-Layer-LevelInfoLayer");
         btn->setZOrder(btn_Z_LIL);
-        geode::log::info("Setting Z-Layer of LevelInfoLayer button to {}", btn_Z_LIL);
+        geode::log::debug("Setting Z-Layer of LevelInfoLayer button to {}", btn_Z_LIL);
         menu->updateLayout();
         
         return true;
@@ -99,7 +99,7 @@ class $modify(MakeEditLevelLayer, EditLevelLayer) {
         menu->addChild(btn);
         auto btn_Z_ELL  = Mod::get()->getSettingValue<int64_t>("Z-Layer-EditLevelLayer");
         btn->setZOrder(btn_Z_ELL);
-        geode::log::info("Setting Z-Layer of EditLevelLayer button to {}", btn_Z_ELL);
+        geode::log::debug("Setting Z-Layer of EditLevelLayer button to {}", btn_Z_ELL);
         menu->updateLayout();
 
         return true;
@@ -142,7 +142,7 @@ class $modify(MakeLevelBrowserLayer, LevelBrowserLayer) {
         menu->addChild(btn);
         auto btn_Z_LBL = Mod::get()->getSettingValue<int64_t>("Z-Layer-LevelBrowserLayer");
         btn->setZOrder(btn_Z_LBL);
-        geode::log::info("Setting Z-Layer of LevelBrowserLayer button to {}", btn_Z_LBL);
+        geode::log::debug("Setting Z-Layer of LevelBrowserLayer button to {}", btn_Z_LBL);
         menu->updateLayout();
 
         return true;
