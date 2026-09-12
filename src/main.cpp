@@ -61,8 +61,9 @@ class $modify(MakeLevelInfoLayer, LevelInfoLayer) {
 
         btn->setID("create-button"_spr);
         menu->addChild(btn);
-        auto btn_Z  = Mod::get()->getSettingValue<int64_t>("Z-Layer");
-        btn->setZOrder(btn_Z);
+        auto btn_Z_LIL = Mod::get()->getSettingValue<int64_t>("Z-Layer-LevelInfoLayer");
+        btn->setZOrder(btn_Z_LIL);
+        geode::log::info("Setting Z-Layer of LevelInfoLayer button to {}", btn_Z_LIL);
         menu->updateLayout();
         
         return true;
@@ -96,8 +97,9 @@ class $modify(MakeEditLevelLayer, EditLevelLayer) {
 
         btn->setID("create-button"_spr);
         menu->addChild(btn);
-        auto btn_Z  = Mod::get()->getSettingValue<int64_t>("Z-Layer");
-        btn->setZOrder(btn_Z);
+        auto btn_Z_ELL  = Mod::get()->getSettingValue<int64_t>("Z-Layer-EditLevelLayer");
+        btn->setZOrder(btn_Z_ELL);
+        geode::log::info("Setting Z-Layer of EditLevelLayer button to {}", btn_Z_ELL);
         menu->updateLayout();
 
         return true;
@@ -138,6 +140,9 @@ class $modify(MakeLevelBrowserLayer, LevelBrowserLayer) {
         if (usedFallback)
             btn->setPosition({ -515.f, 90.f });
         menu->addChild(btn);
+        auto btn_Z_LBL = Mod::get()->getSettingValue<int64_t>("Z-Layer-LevelBrowserLayer");
+        btn->setZOrder(btn_Z_LBL);
+        geode::log::info("Setting Z-Layer of LevelBrowserLayer button to {}", btn_Z_LBL);
         menu->updateLayout();
 
         return true;
