@@ -131,6 +131,7 @@ class $modify(MakeLevelBrowserLayer, LevelBrowserLayer) {
                 "create.png"_spr, .8f,
                 CircleBaseColor::Green,
                 usedFallback ? CircleBaseSize::Small : CircleBaseSize::MediumAlt
+                if (usedFallback) geode::log::debug("Using fallback button size for LevelBrowserLayer button"),
             ),
             this,
             menu_selector(MakeLevelBrowserLayer::onButton)
